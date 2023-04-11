@@ -22,13 +22,13 @@ foreach ($extension_id in $extension_ids) {
     $titleRegex = "<title>(.+?)<\/title>" 
     $title = $response.Content | Select-String -Pattern $titleRegex | ForEach-Object { $_.Matches.Groups[1].Value }
     
-    Write-Output "Extension ID: $extension_id, 'Chrome store query results, Title:' $title"
+    Write-Output "Extension ID: $extension_id"
     Write-Output ""
     Write-Output "CHROMESTORE QUERY RESULTS, Title: $title"
 
     Write-Output ""
-    Write-Output "RESPONSE TO CHROMESTORE QUERY FOR EXTENSION ID:"
-    Write-Output $response
+    #Write-Output "RESPONSE TO CHROMESTORE QUERY FOR EXTENSION ID:"
+    #Write-Output $response
 
     Write-Output "-----------------"
     Write-Output ""
