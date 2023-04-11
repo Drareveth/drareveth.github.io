@@ -1,6 +1,7 @@
 # drareveth.github.io
 :)
 #### Chrome Extension Title Enumeration
+Query's the extension ID's on a host to their respective title on the Chrome store
 ```bat
 # Get the list of extension IDs from the previous query
 $chrome = Get-ChildItem "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Extensions" | Select-Object Name
