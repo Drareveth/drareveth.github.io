@@ -3,7 +3,11 @@
 #### Chrome Extension Enumeration
 Query's the extension ID's on a host to their respective title on the Chrome store
 
-N.B> Amend the user $user you wish to query before executing the script
+It's worth identifying all of the extension folders first using:
+```bat
+Get-ChildItem "C:\Users\*\AppData\Local\Google\Chrome\User Data\*\Extensions" | Select-Object FullName
+```
+N.B> Amend the user $user and or profile path you wish to query before executing the script
 ```bat
 # Get the list of extension IDs
 $user="username"
