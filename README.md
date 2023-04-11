@@ -2,9 +2,12 @@
 :)
 #### Chrome Extension Enumeration
 Query's the extension ID's on a host to their respective title on the Chrome store
+
+N.B> Amend the user $user you wish to query before executing the script
 ```bat
 # Get the list of extension IDs from the previous query
-$chrome = Get-ChildItem "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Extensions" | Select-Object Name
+$user="username"
+$chrome = Get-ChildItem "C:\Users\$user\AppData\Local\Google\Chrome\User Data\Profile 1\Extensions" | Select-Object Name
 $extension_ids = $chrome | ForEach-Object { ($_ -split "\\")[-1] }
 Write-Output "-----------------"
 Write-Output "Extension ID's Identified"
